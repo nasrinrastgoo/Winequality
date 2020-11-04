@@ -50,6 +50,7 @@ print(wine.pH.describe())
 # b.to_numpy(wine)
 # b.wine_ph_series(wine)
 # b.truncate(wine)
+b.iteration(wine)
 
 
 

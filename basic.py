@@ -153,6 +153,7 @@ def adding_col(wine):
 def truncate(wine):
     truncate_result=wine['pH'].truncate(before=2,after=5)
     print(truncate_result)
+
 ##-------------Shuffle data
 def shuffle(wine):
     wine.sample(frac=1)
@@ -168,3 +169,9 @@ def to_numpy(wine):
 def wine_ph_series(wine):
     wine_series=pd.Series(wine['pH'])
     print(wine_series.to_numpy())
+
+#___iterate
+# (in wine.head())
+def iteration(wine):
+    for i,j in wine.head().iterrows():
+        print (i,j)
