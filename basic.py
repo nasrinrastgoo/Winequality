@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-# indexing
+#-------indexing
 ##index based selection
 def index(wine):
     wine.iloc[2]
@@ -31,7 +31,7 @@ def show_column(wine):
 # wine.iloc[:4,0]
 # print(wine.iloc[:4,0])
 
-##label based selection
+##--------label based selection
 def label_selection(wine, column):
     wine.loc[0, column]
     print(wine.loc[0, column])
@@ -42,7 +42,7 @@ def more_label_selectiom(wine):
     print(wine.loc[:, ['pH', 'alcohol']])
 
 
-# conditional selection
+#--------conditional selection
 def conditional_selection(wine):
     wine.loc[wine.quality == 7]
     print(wine.loc[wine.quality == 7])
@@ -65,7 +65,7 @@ def unique_value(wine):
     print(wine.pH.value_counts())
 
 
-##---Grouping & Sorting
+##-------------Grouping & Sorting
 def grouping(wine):
     wine.groupby('quality').quality.count()
     print(wine.groupby('quality').quality.count())
@@ -90,7 +90,7 @@ def sorting(wine):
     print(wine_grouping_sort)
 
 
-##---Map
+##--------------Map
 def mapping(wine):
     wine_quality_mean = wine.quality.mean()
     print(wine.quality.map(lambda q: q - wine_quality_mean))
@@ -115,7 +115,7 @@ def rename_another(wine):
 # wine.rename_axis('wine',axis='rows').rename_axis('material_points',axis='columns')
 # print(wine.rename_axis('wine',axis='rows').rename_axis('material_points',axis='columns'))
 
-##----Drop
+##-----------add & Drop
 # drop a row
 def drop(wine):
     wine.drop(1)
@@ -135,7 +135,7 @@ def drop_column(wine):
 # wine.drop(wine.columns[[10]],axis=1)
 # print(wine.drop(wine.columns[[10]],axis=1))
 
-##------add a row
+##---add a row
 def adding_row(wine):
     wine_2 = pd.DataFrame({'fixed_acidity': [4, 5],
                            'volatile_acidity': [0.1, 0.2],
@@ -143,8 +143,13 @@ def adding_row(wine):
     wine.append(wine_2, ignore_index=True)
     print(wine.append(wine_2, ignore_index=True))
 
+#---add a column
+def adding_col(wine):
+    quantity=[1,2,3,4,5,6,7,8]
+    wine['quantity']=quantity
+    print(wine)
 
-##---Shuffle data
+##-------------Shuffle data
 def shuffle(wine):
     wine.sample(frac=1)
     print(wine.sample(frac=1))

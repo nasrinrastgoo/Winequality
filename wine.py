@@ -4,7 +4,7 @@ import missingValue as mv
 
 wine = pd.read_csv('winequality-red.csv')
 ##-----------Summary
-# wine.pH.describe()
+wine.pH.describe()
 print(wine.pH.describe())
 # print(wine.pH.mean())
 # print(wine.pH.unique())
@@ -48,7 +48,7 @@ print(wine.pH.describe())
 # b.drop_column(wine)
 # b.adding_row(wine)
 # b.to_numpy(wine)
-b.wine_ph_series(wine)
+# b.wine_ph_series(wine)
 
 
 ##------------Missing Value
@@ -58,3 +58,4 @@ b.wine_ph_series(wine)
 # mv.replace(wine)
 
 
+wine.info()
