@@ -49,6 +49,8 @@ print(wine.pH.describe())
 # b.adding_row(wine)
 # b.to_numpy(wine)
 # b.wine_ph_series(wine)
+# b.truncate(wine)
+
 
 
 ##------------Missing Value

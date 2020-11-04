@@ -149,6 +149,10 @@ def adding_col(wine):
     wine['quantity']=quantity
     print(wine)
 
+#--truncate
+def truncate(wine):
+    truncate_result=wine['pH'].truncate(before=2,after=5)
+    print(truncate_result)
 ##-------------Shuffle data
 def shuffle(wine):
     wine.sample(frac=1)
